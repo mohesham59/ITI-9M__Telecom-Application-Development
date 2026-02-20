@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Posts Example</title>
+    <style>
+        button {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px;
+        }
+        .Post {
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(168, 162, 211);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Get Posts</button>
+    <div id="Posts"></div>
+
+    <script>
+        var btn = document.getElementById("btn");
+        var postsContainer = document.getElementById("Posts");
+
+        btn.addEventListener("click", function() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://jsonplaceholder.typicode.com/posts");
+            xhr.send();
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    displayPosts(data);
+                }
+            };
+        });
+
+        function displayPosts(items) {
+            postsContainer.innerHTML = "";
+            items.forEach(function(item) {
+                postsContainer.innerHTML += `
+                    <div class="Post">
+                        <h3>${item.title}</h3>
+                        <p>${item.body}</p>
+                    </div>
+                `;
+            });
+        }
+    </script>
+</body>
+</html>

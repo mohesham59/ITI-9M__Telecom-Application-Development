@@ -1,0 +1,29 @@
+Day 3:
+======
+
+Answer the following questions:
+--------------------------------
+
+1- Program to find the minimum & maximum value of array elements. (Min_Max Array)
+
+2- Program to Calculate "Sum of each row" , "Average of each column" in a 2D Array. (3 std, 4 subjects)
+
+3- Program to add two matrix and put the result in a third one, then print the result.
+
+4- Program to take char and displays if it is "Normal or Extended key" along with its Ascii value.
+
+5- Highlight Menu: New Colored Menu "with Arrows"
+
+
+Answer "as much as you can" from the following:
+------------------------------------------------
+
+- Program to Find the Frequency of Characters in a String
+
+- Program to Remove all Characters in a String Except Alphabet
+
+- Program to Find the Length of a String "without Using strlen() or size()"
+
+- try to implement jagged-Array (without using pointers)
+
+

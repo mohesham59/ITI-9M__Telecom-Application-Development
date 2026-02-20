@@ -1,0 +1,29 @@
+1- in "GeoShape" example, do changes required to overcome "Square & Circle Problems of setting different dim values":
+	- try "protected inheritance", 
+
+
+
+2- Composition Example: Point, Rect, Circle, Line + drawing graphics.
+	- each class should have: attributes, constructors, setters & getters, Draw()
+
+
+
+3- in "GeoShape" example, do changes required to:
+	- prevent anyone from creating object of shape class "make it abstract, 
+	- try using "pure virtual function: CalcArea()"
+
+
+4- Continue on last day assignment (Base-Derived-DerivedJunior):
+	- try to create pointer from each parent, and points to every object from child (try to access member data and call member functions and see what happens) 
+
+
+
+Bonus:
+-------
+	- Lamp 
+
+
+
+Note: 
+	- Students should Trace the code by F7 or F8 to see the sequence of calling of constructors.
+	- Check graphics settings on CodeBlocks

@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1765557914 source:d:\iti_9monuth\6-data structure & algo\day 4\lab 4\1 - implement bst\main.cpp
+	<iostream>
+	"BST.h"
+	"Node.h"
+	"Employee.h"
+
+1765557415 d:\iti_9monuth\6-data structure & algo\day 4\lab 4\1 - implement bst\include\bst.h
+	<iostream>
+	"Node.h"
+	"Employee.h"
+
+1765557547 d:\iti_9monuth\6-data structure & algo\day 4\lab 4\1 - implement bst\include\node.h
+	"Employee.h"
+
+1765557501 d:\iti_9monuth\6-data structure & algo\day 4\lab 4\1 - implement bst\include\employee.h
+	<string>
+
+1765557553 source:d:\iti_9monuth\6-data structure & algo\day 4\lab 4\1 - implement bst\src\bst.cpp
+
+1765557555 source:d:\iti_9monuth\6-data structure & algo\day 4\lab 4\1 - implement bst\src\employee.cpp
+
+1765557558 source:d:\iti_9monuth\6-data structure & algo\day 4\lab 4\1 - implement bst\src\node.cpp
+

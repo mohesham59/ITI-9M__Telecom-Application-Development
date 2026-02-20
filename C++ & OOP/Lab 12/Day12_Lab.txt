@@ -1,0 +1,32 @@
+1- Continue on last day assignment (Base-Derived-DerivedJunior) example:
+- try the following:
+	- create pointer from base points to object from derived "call derived function using base pointer"
+	- use "virtual" keyword, then try again to see what is the difference
+
+
+
+2- in "GeoShape" example, do changes required to:
+	- make another function called "sumOfAllShapesArea", that takes 4 shapes and return sum of these shapes areas.
+
+
+
+3- Continue on last day assignment:
+- Composition Example: Point, Rect, Circle, Line + drawing graphics.
+	- each class should have: attributes, constructors, setters, Draw()
+ 
+- Aggregation Example: Picture, Point, Rect, Circle, Line + graphics.
+	- class Picture should have: attributes, constructors, setters, Paint()
+	- set color in (Rect, Circle, Line) before drawing.
+
+
+4- Continue the Picture Example:
+      - Write new class Shape with variable color + setters and getters.. Rect, Circle, and Line to Inherit from it.
+      - in class Shape Make function "Draw( )", a pure virtual function, then make necessary changes to other classes.
+      - Simplify the Picture class, so as to only be constructed by an array of Shapes (array of pointers to Shape), 
+	then use the pointer of base class to call the Draw( ) function of Circle, Rect, and Line.
+
+
+
+Bonus:
+======
+- Draw "jagged Array" of shapes...

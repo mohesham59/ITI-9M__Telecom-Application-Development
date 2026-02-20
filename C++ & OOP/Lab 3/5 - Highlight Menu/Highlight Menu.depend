@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1763629359 source:d:\iti - 9monuth\5-c++ & oop\day 2\lab 2\highlight menu\main.cpp
+	<iostream>
+	<MyLibrary.h>
+	<conio.h>
+

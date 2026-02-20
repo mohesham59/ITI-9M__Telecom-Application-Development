@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+    <style>
+        input{
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Text Color Range.</h1>
+    <form action="" method="get">
+        <!--Red-->
+        Red <input class="red" type="range" name="red" min="0" max="255">
+
+        <!--Green-->
+        Green <input class="green" type="range" name="green" min="0" max="255">
+
+        <!--Blue-->
+        Blue <input class="blue" type="range" name="blue" min="0" max="255">
+
+    </form>
+
+    <p style="font-size: 25px">Change the 3 color Ranges above and observe my color change</p>
+
+    <script>
+        var redSlider = document.querySelector('.red');
+        var greenSlider = document.querySelector('.green');
+        var blueSlider = document.querySelector('.blue');
+        var text = document.querySelector('p');
+
+
+        function updateColor() {
+            const r = redSlider.value;
+            const g = greenSlider.value;
+            const b = blueSlider.value;
+
+            text.style.color = `rgb(${r}, ${g}, ${b})`;
+        }
+
+        redSlider.addEventListener('input', updateColor);
+        greenSlider.addEventListener('input', updateColor);
+        blueSlider.addEventListener('input', updateColor);
+        
+    </script>
+</body>
+</html>

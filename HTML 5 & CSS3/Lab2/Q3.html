@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Colored Circles Canvas</title>
+    <style>
+        canvas {
+            border: 2px solid black;
+            display: block;
+            margin-top: 10px;
+        }
+        input, button {
+            margin: 5px;
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <input type="color" id="colorPicker" value="#ff0000">
+    <button id="drawBtn">Draw Circles</button>
+    <button id="clearBtn">Clear</button>
+    <canvas id="myCanvas" width="500" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        const drawBtn = document.getElementById("drawBtn");
+        const clearBtn = document.getElementById("clearBtn");
+        const colorPicker = document.getElementById("colorPicker");
+
+
+        clearBtn.addEventListener("click", () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        });
+
+        drawBtn.addEventListener("click", () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const circleCount = Math.floor(Math.random() * 11) + 10 ;
+            const radius = 15;
+            const circles = [];
+
+            for (let i = 0; i < circleCount; i++) {
+                const x = Math.random() * (canvas.width - radius * 2) + radius;
+                const y = Math.random() * (canvas.height - radius * 2) + radius;
+
+                circles.push({ x, y });
+            }
+
+            let i = 0;
+            const timer = setInterval(() => {
+                if (i >= circles.length) {
+                    clearInterval(timer);
+                    return;
+                }
+                ctx.beginPath();
+                ctx.arc(circles[i].x, circles[i].y, radius, 0, Math.PI * 2);
+                ctx.fillStyle = colorPicker.value;
+                ctx.fill();
+                ctx.closePath();
+                i++;
+            }, 100);
+        });
+    </script>
+</body>
+</html>

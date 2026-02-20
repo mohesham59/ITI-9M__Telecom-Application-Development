@@ -1,0 +1,48 @@
+1- in "Complex Operator Overloading" example, add Casting Operator overloading "(int)C1":
+
+int X = (int) C1
+
+
+----------------------------------------------------------------------
+
+2- Base/Derived classes:
+
+class Base
+	- private members x
+	- "protected" member y
+	- constructors & destructor
+	- setters & getters
+	- function sum (return summation of x and y)
+
+class Derived
+	- private members z
+	- constructors & destructor
+	- setters & getters
+	- override function sum in Derived to add functionality to the Base sum function:
+	(return summation of x and y and z)
+	
+class Derived_Junior
+	- private members m
+	- constructors & destructor
+	- setters & getters
+	- override function sum in Derived_Junior to add functionality to the Derived sum function:
+	(return summation of x and y and z and m)
+
+----------------------------------------------------------------------
+
+3- Class GeoShape:
+
+class GeoShape
+	- private members dim1, dim2
+	- constructors & destructor
+	- setters & getters
+	- function CalcArea(return 0)	
+
+	- then we have to create 4 derived classes (Rectangle, Square, Circle, Triangle) 
+	  in which they inherit from Shape base class.
+	- override function CalcArea in these derived classes to calculate area according to each shape	
+
+
+
+Note: Students should Trace the code by F7 or F8 to see the sequence of calling of constructors of Base and Derived.
+

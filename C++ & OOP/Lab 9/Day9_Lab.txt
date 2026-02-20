@@ -1,0 +1,86 @@
+1- Implement Function Sum with "Default Arguments"
+
+int SUM ( int x, int y, int z);  //try it with all possible default values
+  
+---------------------------------------------------------------------
+
+2- Overload the following Operators for Complex and Stack classes:
+
+class Complex
+==============
+C3 = C1 - C2;
+
+C3 = 7 - C2;
+
+C3 = C2 - 7;
+
+C1-=C2;
+
+C2=--C1;
+
+C2 = C1--; 
+
+C1 == C2
+
+C1 != C2
+
+C1 > C2,  C1 >= C2,
+
+C1 < C2, C1 <= C2,  
+
+(int) C1
+
+cout<< C1['R']
+
+
+Class Stack:
+============
+static int counter  
+static int getCounter()
+
+
+
+operator= //S1 = S2;
+
+operator+ //S3 = S1 + S2; //Append 
+
+// cout<< S1[i];
+// S1[i] = X; 
+
+---------------------------------------------------------------------
+
+3- Class date:
+	Write "date class":
+		- Constructors
+		- printDate()  // Day/Moth/Year
+
+	
+	apply operator overloading for:
+	
+	int operator-(date);			//diff = d2 - d3;
+	date operator+(int);			//d1 = d2 + 10;
+	date operator++(); //Prefix		//d1= ++d2;
+	date operator++(int); //Postfix		//d1= d2++;
+	void operator=(date); 		 	//d1 = d2;
+
+	bool operator==(date);			//if(d1==d2);
+
+	operator int(); //casting operator	//int x= (int)d1;
+	// Note: No return type for the casting operator,
+	// because it automatically returns the type you are casting to.
+
+	int operator [] (char ch);		//int day=d1['d'];  //int month=d1['m'];  //int year=d1['y'];
+
+
+Note: Students should Trace the code by F7 or F8 to see the sequence of calling of constructors.
+
+------------------------------------------------------------------------------
+
+
+Bonus:
+=======
+  re-write The same "Complex class" from previous assignment, with applying operator overloading for:
+	
+	operator<<    //cout << c1;
+
+	operator>>    //cin >> c1;

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Card</title>
+    <style>
+        *{ 
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial, Helvetica, sans-serif';
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f2f4f8;
+        }
+        .card{
+            display: flex;
+            width: 600px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow:  0 10px 25px rgba(0, 0, 0, 0.1);
+            background-color: rgb(227, 233, 233);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            animation: float 4s ease-in-out infinite;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        .card img {
+            width: 50%;
+            height: auto;
+        }
+        .card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 50%;
+            text-align: left;
+        }
+        .card-content h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .card-content p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #000000;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="download.jpg" alt="Card Image">
+        <div class="card-content">
+            <h1>My Card</h1>
+            <p>
+                “Be yourself; everyone else is already taken.”<br>
+                ― Oscar Wilde
+            </p>
+        </div>
+    </div>
+</body>
+</html>

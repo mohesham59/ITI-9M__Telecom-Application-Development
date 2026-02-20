@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1765636731 source:d:\iti_9monuth\6-data structure & algo\day 5\lab 5\3 - dfs traversal\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+	<stack>
+

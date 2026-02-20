@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Form</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #f4c542;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 2px solid #ccc;
+        }
+
+        input.valid {
+            border-color: green;
+        }
+
+        input.invalid {
+            border-color: red;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+            display: none;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 14px;
+            border: 1px solid #333;
+            cursor: pointer;
+            margin-right: 10px;
+            background-color: white;
+            color: black;
+        }
+
+        button:hover {
+            background-color: #f0f0f0;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            display: none;
+            border: 1px solid #000;
+        }
+
+        th {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #000;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>User Information</h2>
+
+            <label>Name:</label>
+            <input type="text" id="name">
+            <div class="error" id="nameError">Name is required</div>
+
+            <label>Age:</label>
+            <input type="text" id="age">
+            <div class="error" id="ageError">Age must be a number between
+                1-120</div>
+
+            <label>Email:</label>
+            <input type="text" id="email">
+            <div class="error" id="emailError">Please enter a valid email</div>
+
+            <div>
+                <button id="addBtn">Add</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+
+            <table id="userTable">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                </tr>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+        <script src="q7.js"></script>
+    </body>
+</html>

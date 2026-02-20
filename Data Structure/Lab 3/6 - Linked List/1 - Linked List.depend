@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1765050272 source:d:\iti - 9monuth\6 - data structure & algo\day 1\lab\1 - linked list\main.cpp
+	<iostream>
+	"LinkedList.h"
+
+1765050209 d:\iti - 9monuth\6 - data structure & algo\day 1\lab\1 - linked list\include\linkedlist.h
+	<cstddef>
+	"Node.h"
+	<iostream>
+
+1765045648 d:\iti - 9monuth\6 - data structure & algo\day 1\lab\1 - linked list\include\node.h
+	<cstddef>
+
+1765045687 source:d:\iti - 9monuth\6 - data structure & algo\day 1\lab\1 - linked list\src\linkedlist.cpp
+
+1765045693 source:d:\iti - 9monuth\6 - data structure & algo\day 1\lab\1 - linked list\src\node.cpp
+
+1765045687 source:d:\iti - 9monuth\6 - data structure & algo\day 3\lab 3\6 - linked list\src\linkedlist.cpp
+
+1765045693 source:d:\iti - 9monuth\6 - data structure & algo\day 3\lab 3\6 - linked list\src\node.cpp
+
+1765466418 source:d:\iti - 9monuth\6 - data structure & algo\day 3\lab 3\6 - linked list\main.cpp
+	<iostream>
+	"LinkedList.h"
+
+1765466381 d:\iti - 9monuth\6 - data structure & algo\day 3\lab 3\6 - linked list\include\linkedlist.h
+	<cstddef>
+	"Node.h"
+	<iostream>
+
+1765045648 d:\iti - 9monuth\6 - data structure & algo\day 3\lab 3\6 - linked list\include\node.h
+	<cstddef>
+

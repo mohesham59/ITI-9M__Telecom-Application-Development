@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parent Window</title>
+</head>
+<body>
+
+<h2>Parent Window</h2>
+
+<button onclick="openChildWindow()">Open Child Window</button>
+
+<script>
+function openChildWindow() {
+
+    // Open a new child window
+    var childWindow = window.open("", "new window", "width=400,height=300");
+
+    // Add content to the child window
+    childWindow.document.write("<h3>This is the Child Window</h3>");
+    childWindow.document.write("<p>This window will close in 5 seconds...</p>");
+
+    // Close the child window after 5 seconds
+    setTimeout(function() {
+        childWindow.close();
+    }, 5000); // 5000 milliseconds = 5 seconds
+}
+</script>
+
+</body>
+</html>

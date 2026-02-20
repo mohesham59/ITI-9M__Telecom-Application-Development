@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1765634203 source:d:\iti_9monuth\6-data structure & algo\day 5\lab 5\2 - bfs traversal\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+

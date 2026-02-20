@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="music.jfif" style="width: 300px;" style="height: 300px;"><br>
+    <audio ontimeupdate="changeRangeTime()">
+        <source src="drums.mp3">
+    </audio>
+    <button onclick="playAudio()">play</button>
+    <button onclick="pauseAudio()">pause</button>
+    <button onclick="stopAudio()">stop</button>
+    <button onclick="nextAudio()">next</button>
+    <button onclick="prevAudio()">prev</button><br>
+    
+    vol: <input oninput="changeVol(this)" type="range" value="1" step="0.1" min="0" max="1">
+    time: <input oninput="changeAudioTime()" type="range" value="0" min="0" id="rangeTime"><br><br>
+
+    <button onclick="drumStart()" style="width: 250px;">drums</button><br><br>
+    <button onclick="woodwindStart()" style="width: 250px;">WoodWind</button><br><br>
+    <button onclick="triangleStart()" style="width: 250px;">Triangle</button><br><br>
+
+    <script>
+        const playlist = [
+            { img: "1.jfif", audio: "1.mp3" },
+            { img: "2.jfif", audio: "2.mp3" },
+            { img: "3.jfif", audio: "3.mp3" }
+        ];
+
+        var index=0; 
+
+        var aud = document.querySelector("audio");
+        var img = document.querySelector("img");
+        var timeRange = document.getElementById("rangeTime");
+        window.addEventListener("load", function () {
+            console.log(aud.duration);
+            timeRange.setAttribute("max", aud.duration);
+
+        })
+        function changeRangeTime() {
+            timeRange.value = aud.currentTime;
+        }
+        function changeAudioTime() {
+            aud.currentTime = timeRange.value;
+        }
+        function changeVol(rangeVol) {
+            aud.volume = rangeVol.value;
+        }
+        function test() {
+            console.log(aud.volume);
+        }
+        function playAudio() {
+            aud.play();
+        }
+
+        function pauseAudio() {
+            aud.pause();
+        }
+        function stopAudio() {
+            aud.load();
+            aud.pause();
+        }
+        function nextAudio(){
+            index=(index+1)%playlist.length;
+            updateMusic();
+        }
+        function prevAudio(){
+            index=(index-1+playlist.length)%playlist.length;
+            updateMusic();
+        }
+        function updateMusic(){
+            img.src = playlist[index].img;
+            aud.src = playlist[index].audio;
+            aud.play();
+        }
+        function drumStart() {
+            index=0;
+            updateMusic();
+        }
+        function woodwindStart() {
+            index=1;
+            updateMusic();
+        }
+        function triangleStart() {
+            index=2;
+            updateMusic();
+        }
+    </script>
+</body>
+
+</html>

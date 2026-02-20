@@ -1,0 +1,89 @@
+Lab:
+====
+
+1) Complex Class:
+	- constructors (Parameterless & Parameterized) //Complex C1(2,3), C2(4), C3;
+	- destructor
+	- use "this"
+	- use "::" scope operator
+	- Copy Constructor
+	-
+	- try to call member function "Add" (with Cpy Ctor/ without Cpy Ctor),
+	and trace each approach to see number of objects created or destructed each time  
+
+	main()
+	{
+		Complex C1(3,4), C2(5), C3;
+    		C3 = C1.Add(C2);
+	}
+
+
+2) Stack Class (Dynamically Allocated) "LIFO":
+	- int* Stk, Tos, Size 
+	- constructors (Parameterless & Parameterized)
+	- destructor	
+	- IsFull() , IsEmpty()
+	- int Pop()
+	- void Push(int)
+
+	- use "this"
+	- Copy Constructor
+	- void viewContent(Stack S); //Friend function
+	- Stack Reverse() //Member function
+		
+	- try the following main, and trace it (with Cpy Ctor/ without Cpy Ctor) 
+	and see what happened each time 
+ 			
+main()
+{
+///************* Copy Ctor Case(1): Pass by value to function ********************
+/*
+    Stack S1;
+
+    S1.push(10);
+    S1.push(20);
+    S1.push(30);
+    S1.push(40);
+
+    viewContent(S1);
+
+    cout<<"Num = "<<S1.pop()<<endl;
+    cout<<"Num = "<<S1.pop()<<endl;
+*/
+
+///************* Copy Ctor Case(2): Return by value from function ********************
+/*
+    Stack S1;
+
+    S1.push(10);
+    S1.push(20);
+    S1.push(30);
+    S1.push(40);
+
+    //Stack SS = S1.Reverse();
+    //cout<SS.pop();
+
+*/
+///************* Copy Ctor Case(3): Create obj in terms of another obj "Explicitly" ********************
+/*
+    Stack S1;
+
+    S1.push(10);
+    S1.push(20);
+    S1.push(30);
+    S1.push(40);
+
+    Stack S3 ( S1 );
+
+    for(int i=0; i<10; i++)
+    S3.pop();
+
+
+    for(int i=0; i<10; i++)
+        S3.push(-1);
+
+    cout<<"Num = "<<S1.pop()<<endl;
+    cout<<"Num = "<<S1.pop()<<endl;
+
+*/
+}

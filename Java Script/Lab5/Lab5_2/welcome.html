@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Welcome</title>
+
+<style>
+body{
+    font-family:Arial;
+    background:#f0f0f0;
+    padding:30px;
+}
+.container{
+    max-width:500px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+}
+.info{
+    border-bottom:1px solid #eee;
+    padding:8px 0;
+}
+button{
+    padding:10px;
+    width:100%;
+    background:green;
+    color:#fff;
+    border:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2 id="welcomeName"></h2>
+<h4 id="job"></h4>
+
+<div class="info" id="email"></div>
+<div class="info" id="mobile"></div>
+<div class="info" id="gender"></div>
+<div class="info" id="address"></div>
+
+<br>
+<button onclick="newReg()">New Registration</button>
+
+</div>
+
+<script>
+
+document.getElementById("welcomeName").innerText =
+"Welcome, "+localStorage.getItem("name");
+
+document.getElementById("job").innerText =
+localStorage.getItem("job");
+
+document.getElementById("email").innerText =
+"Email: "+localStorage.getItem("email");
+
+document.getElementById("mobile").innerText =
+"Mobile: "+localStorage.getItem("mobile");
+
+document.getElementById("gender").innerText =
+"Gender: "+localStorage.getItem("gender");
+
+document.getElementById("address").innerText =
+"Address: "+localStorage.getItem("address");
+
+function newReg(){
+    localStorage.clear();
+    window.location.href="register.html";
+}
+</script>
+
+</body>
+</html>

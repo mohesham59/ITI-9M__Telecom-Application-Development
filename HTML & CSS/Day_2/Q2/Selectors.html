@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <title>
+        Selectors Test
+    </title>
+</head>
+<style>
+     /* 1- select all p elements */
+    p {
+        color: red;  /* All p elements will be red */
+    }
+
+     /* 2- select all p and div elements */
+    p,
+    div {
+        color: blue;  /* Overrides red for p because this comes later */
+        font-weight: bold;
+    }
+
+    /* 3- select div with id myDiv */
+    #myDiv {
+        color: green;  /* div with id="myDiv" will be green */
+        font-weight: bold;
+        background-color: lightgray;
+    }
+
+    /* 4- select all p inside any div */
+    div p {
+        color: aqua;  /* p inside div will be aqua */
+    }
+
+    /* 5- select input with type text and class myClass */
+    input[type="text"].myClass {
+        width: 400px;
+        height: 50px;
+        font-size: 18px;
+        padding: 5px 10px;
+        background-color: lightgray;
+    }
+
+    /* 6- select span immediately after div */
+    div+span {
+        display: block;
+        color: aquamarine;
+        font-size: 20px;
+    }
+
+     /* 7- select p elements with class myClass */
+    p.myClass {
+        color: rgb(128, 0, 115);
+        font-weight: bold;
+        background-color: rgb(211, 220, 144);
+    }
+
+    /* 8- select div with id myDiv1 */
+    div#myDiv1 {
+        color: rgb(52, 39, 102);
+        font-weight: bold;
+        background-color: rgb(18, 224, 227);
+    }
+</style>
+
+<body>
+     <!-- 1- simple p element -->
+    <p>1- select p elements and make them red</p>
+
+    <!-- 2- p and div elements -->
+    <p>2- select p and div elements</p>
+    <div>2- select p and div elements</div>
+
+    <!-- 3- p with class mainClass -->
+    <p class="mainClass">3- select p with class mainClass</p>
+    <div id="myDiv">
+        3- select p with class mainClass direct child for div with id myDiv
+        and make it styled
+    </div>
+
+    <!-- 4- p inside a div -->
+    <div>
+        <p>4- select all p inside div and style them </p>
+    </div>
+
+    <!-- 5- input type text with class myClass -->
+    <input type="text" class="myClass" value="5- select input with type text element with class myClass ">
+    <input type="password" class="myClass" value="5- test input with type password element with class myClass">
+
+    <br><br>
+    <!-- 6- spans after div -->
+    <div>Div before span elements</div>
+    <span>6- select span elements after div First Span</span>
+    <span>6- select span elements after div Second Span</span>
+    <span>6- select span elements after div Third Span</span>
+
+    <br><br>
+    <!-- 7- multiple p elements with class myClass -->
+    <p class="myClass">7- select p with class myClass  </p>
+    <p class="myClass">7- select p with class myClass  </p>
+    <p class="myClass">7- select p with class myClass  </p>
+
+    <!-- 8- div with id myDiv1 -->
+    <div id="myDiv1">8- select div with id myDiv</div>
+</body>
+
+</html>

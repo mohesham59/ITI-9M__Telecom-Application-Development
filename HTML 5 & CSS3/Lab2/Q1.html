@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remember Username Form</title>
+    <style>
+        input{
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Change Email Address</h1>
+    <form id="myForm" action="" method="get">
+        <!-- Username -->
+        <input id="username" required placeholder="Username" type="text" minlength="5" maxlength="25"> <br>
+        
+        <!-- Email -->
+        <input id="email" required placeholder="Email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" minlength="10" maxlength="60"> <br>
+
+        <!--checkbox-->
+        <input id="remember" type="checkbox"> Remember me <br>
+        
+        <!--Submit-->
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(e) {e.preventDefault();
+
+        var usernameInput = document.getElementById("username").value;
+        var remember = document.getElementById("remember").checked;
+
+        if (remember) {
+            localStorage.setItem("username", usernameInput); 
+        } else {
+            localStorage.removeItem("username"); 
+        }
+
+            alert("Form submitted! Username: " + usernameInput + (remember ? " (saved)" : " (not saved)"));
+        });
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,62 @@
+Day 6:
+======
+
+Answer the following questions:
+--------------------------------
+
+1) int* IncrementArray()
+	- try to return fixed Array first, see what happened.
+	- then rerun dynamically allocated array.
+
+
+2) Employee with Dynamic Allocation and Highlight Menu (allow the user to specify the size of array at runtime).
+
+
+3) Re-Write day3_Program that calculate sum of student degrees, and average of each subject, but ask the user for students and subject numbers. (Dynamic Allocation of 2D Array - Pointer to Pointer)
+
+
+4) Complex Class:
+
+	- member data: real , img
+	- member functions: setters & getters
+	- Standalone functions:
+		Complex Add(Complex C1, Complex C2);  
+		Complex Subtract(Complex C1, Complex C2);  
+		void print(Complex C);   // C = 5+3i
+
+	- try to re-write Add function to be member function:
+		Complex Add(Complex C);  
+ 
+	
+	- Check different cases of print:
+
+		real = 5, img = 3  // C1 = 5+3i
+
+		real = 5, img = -3  // C1 = 5 + -3i   ==> C1 = 5-3i
+
+		real = 5, img = 0  // C1 = 5 + 0i   ==> C1 = 5
+
+		real = 0, img = 3  // C1 = 0 + 3i   ==> C1 = 3i
+
+		real = 0, img = 0  // C1 = 0 + 0i   ==> C1 = 0
+
+	
+------------------------------------------------------------------------------
+
+Answer "as much as you can" from the following:
+------------------------------------------------
+
+5) Continue Line Editor and make its width dynamic "dynamic allocation using (malloc)", 
+   Update your single line editor to add "delete" & "backspace"
+
+
+6) Try to implement --jagged array-- on Assignment No.4 Using Pointers:
+ each student may have number of subjects different than the others. 
+
+
+Bonus: 
+======
+
+- Multiline Editor "delete, backspace, upArrow, downArrow, 
+pgUp (first char in the page), pgDown (last char in the page),
+Enter (for new line), Esc (to print the whole lines)"...

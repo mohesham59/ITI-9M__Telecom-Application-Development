@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audio Player with Controls</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+        background: #f0f0f0;
+    }
+    .player {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        display: inline-block;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        margin-bottom: 20px;
+    }
+    button { padding: 10px 15px; margin: 5px; font-size: 16px; cursor: pointer; }
+    input[type=range] { width: 300px; margin: 10px; }
+    .cover { width: 200px; height: 200px; object-fit: cover; margin-bottom: 15px; border-radius: 10px; }
+    .playlist { list-style: none; padding: 0; max-width: 300px; margin: auto; }
+    .playlist li {
+        background: #fff; margin: 5px 0; padding: 10px; border-radius: 5px;
+        cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .playlist li:hover { background: #e0e0e0; }
+    .playlist li.active { background: #d0f0ff; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>Audio Player</h1>
+
+<div class="player">
+    <img id="cover" class="cover" src="cover.jpg" alt="Song Cover">
+    <audio id="audio" src="Al-nas.mp3"></audio>
+
+    <div>
+        <button onclick="playAudio()">Play</button>
+        <button onclick="pauseAudio()">Pause</button>
+        <button onclick="stopAudio()">Stop</button>
+        <button onclick="nextAudio()">Next</button>
+        <button onclick="prevAudio()">Prev</button>
+        <button onclick="muteAudio()">Mute</button>
+    </div>
+
+    <div>
+        <input type="range" id="seek" oninput="changeSeek()">
+    </div>
+
+    <div>
+        Volume: <input type="range" id="volume" oninput="changeVol()">
+    </div>
+
+    <p id="currentTime">0:00 / 0:00</p>
+</div>
+
+<ul class="playlist" id="playlistContainer"></ul>
+
+<script>
+var playlist = document.getElementById("playlistContainer");
+var coverImg = document.getElementById("cover");
+var audioEl = document.getElementById("audio");
+var volumeSlider = document.getElementById("volume");
+var seekBar = document.getElementById("seek");
+
+var Songs = ["song1.mp3", "song2.mp3", "song3.mp3"];
+var Covers = ["cover.jpg", "cover.jpg", "cover.jpg"];
+
+var currentIndex = 0;
+
+/* ========= Create Playlist ========= */
+function buildPlaylist(){
+    playlist.innerHTML = "";
+    for(let i=0;i<Songs.length;i++){
+        let li = document.createElement("li");
+        li.textContent = Songs[i].replace(".mp3","");
+        if(i===currentIndex) li.classList.add("active");
+        li.onclick = function(){
+            loadSong(i);
+            playAudio();
+        }
+        playlist.appendChild(li);
+    }
+}
+
+/* ========= Load Song ========= */
+function loadSong(index){
+    currentIndex = index;
+    audioEl.src = Songs[index];
+    coverImg.src = Covers[index];
+    updateActive();
+}
+
+/* ========= Highlight Active Song ========= */
+function updateActive(){
+    let items = playlist.querySelectorAll("li");
+    items.forEach(function(li,i){
+        li.classList.toggle("active", i===currentIndex);
+    });
+}
+
+/* ========= Controls ========= */
+function playAudio(){
+    audioEl.play();
+}
+
+function pauseAudio(){
+    if(audioEl.paused) audioEl.play();
+    else audioEl.pause();
+}
+
+function stopAudio(){
+    audioEl.pause();
+    audioEl.currentTime = 0;
+}
+
+function muteAudio(){
+    audioEl.muted = !audioEl.muted;
+}
+
+/* ========= Next / Prev ========= */
+function nextAudio(){
+    currentIndex = (currentIndex+1) % Songs.length;
+    loadSong(currentIndex);
+    playAudio();
+}
+
+function prevAudio(){
+    currentIndex = (currentIndex-1+Songs.length) % Songs.length;
+    loadSong(currentIndex);
+    playAudio();
+}
+
+/* ========= Volume ========= */
+function changeVol(){
+    audioEl.volume = volumeSlider.value;
+}
+
+/* ========= Seek ========= */
+function changeSeek(){
+    audioEl.currentTime = seekBar.value;
+}
+
+/* ========= Time Update ========= */
+audioEl.ontimeupdate = function(){
+    seekBar.value = audioEl.currentTime;
+
+    let c = Math.floor(audioEl.currentTime);
+    let d = Math.floor(audioEl.duration) || 0;
+
+    let cMin = Math.floor(c/60);
+    let cSec = c%60;
+    let dMin = Math.floor(d/60);
+    let dSec = d%60;
+
+    document.getElementById("currentTime").textContent =
+    `${cMin}:${cSec.toString().padStart(2,"0")} / ${dMin}:${dSec.toString().padStart(2,"0")}`;
+}
+
+/* ========= Metadata ========= */
+audioEl.onloadedmetadata = function(){
+    seekBar.max = audioEl.duration;
+}
+
+/* ========= Init ========= */
+buildPlaylist();
+loadSong(currentIndex);
+</script>
+
+</body>
+</html>

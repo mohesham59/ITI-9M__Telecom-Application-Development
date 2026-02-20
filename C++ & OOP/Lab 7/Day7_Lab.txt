@@ -1,0 +1,86 @@
+1) Class Complex:
+=================
+	- member variables(real, img)
+	- constructors(default, parameterized)
+	- setters & getters
+	- member functions: "Addcomplex, subComplex, PrintComplex"  (use scope operator "::")
+	- destructor
+	- use "this" as much as you can
+	
+
+try this main, count No of constructors vs No of destructors:
+
+void main()
+{
+	Complex C1(3,4), C2(5), C3;
+	C3 = C1.Addcopmlex(C2);
+}
+
+
+2) Function Overloading:
+========================
+class myTestClass
+{
+	// Function Add: Add 2 integer numbers:  int Add(int, int)
+	// Function Add: Add 3 integer numbers:  int Add(int, int, int)
+        // Function Add: Add 3 characters  // concatenate them: void Add(char c1, char c2, char ch)
+	// Function Add: Add 2 Strings  // concatenate them: void Add(char* str1, char* str2)
+}
+
+
+
+3) Stack (LIFO):
+================
+
+Class Stack
+{
+	int[] Stk, Tos, Size;
+
+	int Peak()
+	{ ... }
+
+	Stack Reverse() //return new stack "with reversed internal array of original stack"
+	{ ... }
+
+	void PrintStack() //print stack content without Poping them out
+	{ ... }
+}
+
+
+try this main:
+
+main()
+{
+	Stack S1(5);
+	
+	S1.Push(10);
+	S1.Push(20);
+	S1.Push(30);
+
+	cout<< S1.Peak(); //30
+	cout<< S1.Peak(); //30
+
+	cout<< S1.Pop(); //30
+	cout<< S1.Pop(); //20
+
+	Stack S2(5);
+	
+	S2.Push(3);
+	S2.Push(4);
+	S2.Push(5);
+	S2.Push(6);
+
+	cout<< S2.Reverse().Pop() ; 	
+}
+
+
+
+4) Queue (FIFO): (2 methods "Circular & Shifting")
+================  
+	- int* Q, Head, Tail 
+	- constructors (Parameterless & Parameterized)
+	- destructor	
+	- IsFull()
+	- IsEmpty()
+	- int DeQueue() 
+	- void EnQueue(int)  

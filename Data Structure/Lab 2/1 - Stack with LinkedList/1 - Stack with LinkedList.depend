@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1765184001 source:d:\iti - 9monuth\6 - data structure & algo\day2\lab\1 - stack with linkedlist\main.cpp
+	<iostream>
+	"LinkedList.h"
+	"StackLinkedList.h"
+	"QueueLinkedList.h"
+	"QueueLinkedList.h"
+	"QueueCircular.h"
+	"StackNextGreater.h"
+
+1765146363 d:\iti - 9monuth\6 - data structure & algo\day2\lab\1 - stack with linkedlist\include\linkedlist.h
+	<cstddef>
+	"Node.h"
+	<iostream>
+
+1765128109 d:\iti - 9monuth\6 - data structure & algo\day2\lab\1 - stack with linkedlist\include\node.h
+	<cstddef>
+
+1765181694 d:\iti - 9monuth\6 - data structure & algo\day2\lab\1 - stack with linkedlist\include\stacklinkedlist.h
+	"LinkedList.h"
+
+1765132484 source:d:\iti - 9monuth\6 - data structure & algo\day2\lab\1 - stack with linkedlist\src\linkedlist.cpp
+
+1765132487 source:d:\iti - 9monuth\6 - data structure & algo\day2\lab\1 - stack with linkedlist\src\node.cpp
+
+1765132492 source:d:\iti - 9monuth\6 - data structure & algo\day2\lab\1 - stack with linkedlist\src\stacklinkedlist.cpp
+
+1765135657 source:d:\iti - 9monuth\6 - data structure & algo\day2\lab\1 - stack with linkedlist\src\queuelinkedlist.cpp
+
+1765181131 d:\iti - 9monuth\6 - data structure & algo\day2\lab\1 - stack with linkedlist\include\queuelinkedlist.h
+	"LinkedList.h"
+
+1765180777 d:\iti - 9monuth\6 - data structure & algo\day2\lab\1 - stack with linkedlist\include\queuecircular.h
+	"LinkedList.h"
+
+1765180782 source:d:\iti - 9monuth\6 - data structure & algo\day2\lab\1 - stack with linkedlist\src\queuecircular.cpp
+
+1765183861 d:\iti - 9monuth\6 - data structure & algo\day2\lab\1 - stack with linkedlist\include\stacknextgreater.h
+
+1765183929 source:d:\iti - 9monuth\6 - data structure & algo\day2\lab\1 - stack with linkedlist\src\stacknextgreater.cpp
+

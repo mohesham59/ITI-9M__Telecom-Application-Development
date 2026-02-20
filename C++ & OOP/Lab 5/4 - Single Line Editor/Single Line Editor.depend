@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1764143003 source:d:\iti - 9monuth\5-c++ & oop\day 5\lab 5\single line editor\main.cpp
+	<iostream>
+	<conio.h>
+	<cstdlib>
+	<MyLibrary.h>
+

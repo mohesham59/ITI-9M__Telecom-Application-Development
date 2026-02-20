@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1763543829 source:d:\iti - 9monuth\5-c++ & oop\day 2\lab 2\magic box\main.cpp
+	<iostream>
+	"MyLibrary.h"
+

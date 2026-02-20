@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1765624079 source:d:\iti_9monuth\6-data structure & algo\day 4\lab 4\2 - implement avl\main.cpp
+	<iostream>
+	"AVL.h"
+
+1765625703 d:\iti_9monuth\6-data structure & algo\day 4\lab 4\2 - implement avl\include\avl.h
+	<iostream>
+	"Node.h"
+
+1765624079 d:\iti_9monuth\6-data structure & algo\day 4\lab 4\2 - implement avl\include\node.h
+	"Employee.h"
+
+1765624079 d:\iti_9monuth\6-data structure & algo\day 4\lab 4\2 - implement avl\include\employee.h
+	<string>
+
+1765624085 source:d:\iti_9monuth\6-data structure & algo\day 4\lab 4\2 - implement avl\src\avl.cpp
+
+1765624095 source:d:\iti_9monuth\6-data structure & algo\day 4\lab 4\2 - implement avl\src\employee.cpp
+
+1765624102 source:d:\iti_9monuth\6-data structure & algo\day 4\lab 4\2 - implement avl\src\node.cpp
+

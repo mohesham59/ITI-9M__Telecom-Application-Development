@@ -1,0 +1,70 @@
+<html>
+
+<head>
+        <title>Registration Page</title>
+</head>
+
+<body>
+    <h1 align="center">Registration Form</h1>
+
+    <form method="post" action="Thank_you.html">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required>
+        <br><br>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        <br><br>
+        
+        <label for="repassword">Repeat Password:</label>
+        <input type="password" name="repassword" required>
+        <br><br>
+
+        <label for="Picture">User Picture:</label>
+        <input type="file" name="picture">
+        <br>
+
+        <h3>Gender:</h3>
+        <input type="radio" value="male" name="gender" required> MALE
+        <input type="radio" value="female" name="gender" required> FEMALE
+        <br>
+
+        <h3>Faculty:</h3>
+        <select name="faculty" required>
+            <option value="">--Select Faculty--</option>
+            <option value="engineering">Faculty of Engineering</option>
+            <option value="science">Faculty of Science</option>
+            <option value="commerce">Faculty of Commerce</option>
+            <option value="arts">Faculty of Arts</option>
+        </select>
+        <br>
+        
+        <h3>Interests:</h3>
+        <input name="Interests" value="Programming" type="checkbox"> Programming
+        <br>
+        <input name="Interests" value="reading" type="checkbox"> reading
+        <br>
+        <input name="Interests" value="swimming" type="checkbox"> swimming
+        <br>
+
+        <h3>About you:</h3>
+        <textarea>Write Here...</textarea>
+        <br><br>
+
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">
+            I agreed to <a href="Terms.html" target="_blank">Terms and Conditions</a>
+        </label>
+        <br><br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Features Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f2f4f8; 
+            padding: 30px 0;
+            font-family: sans-serif;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        p.description {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: separate;
+            border-spacing: 30px 20px;
+        }
+
+        .feature-box {
+            width: 250px;
+            padding: 15px 20px;
+            display: flex;             
+            flex-direction: row;       
+            align-items: center;       
+            gap: 15px;                 
+            transition: 0.3s;
+        }
+
+        
+        .feature-box i {
+            font-size: 24px;
+            padding: 20px;
+            border-radius: 50%;
+            background: #d9d9d9; 
+            color: red;
+            flex-shrink: 0; 
+            transition: all 0.3s ease;
+        }
+
+        .feature-box:hover i {
+            color: white;
+            background-color: red;
+        }
+
+        .feature-box div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature-box h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            text-align: left;
+            color: #333;
+        }
+
+        .feature-box p {
+            font-size: 14px;
+            color: #555;
+            text-align: left;
+        }
+
+        tr td {
+            vertical-align: top;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Features</h2>
+    <p class="description">Here we display some features of our web app</p>
+
+    <table>
+        <tr>
+            <td>
+                <div class="feature-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <div>
+                        <h3>Fresh and Clean</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="feature-box">
+                    <i class="fa-solid fa-comments"></i>
+                    <div>
+                        <h3>Retina Ready</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="feature-box">
+                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                    <div>
+                        <h3>Easy to Customize</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="feature-box">
+                    <i class="fa-solid fa-leaf"></i>
+                    <div>
+                        <h3>Adipisicing Elit</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="feature-box">
+                    <i class="fa-solid fa-gears"></i>
+                    <div>
+                        <h3>Sed do Elusmod</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="feature-box">
+                    <i class="fa-solid fa-heart"></i>
+                    <div>
+                        <h3>Labore et Dolore</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

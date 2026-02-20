@@ -1,0 +1,26 @@
+Day 5:
+======
+
+Answer the following questions:
+--------------------------------
+
+1) Program to swap 2 integer values. (3 Versions of Swap function:
+	- Pass by Value
+ 	- Pass by Address
+ 	- Pass by Reference
+
+ 
+2) SumArray Program: 
+	- Function take an array of integers as input, print array values and then return sum of array elements.
+	- In main: read array data from user
+	- Input and Print Array using pointers
+ 	- Try to use "Array Notation while reading data" and "Pointer notation while printing data"
+
+
+3)  Return Multiple values from function "Using Pass By Address":
+void Calculate(int X, int Y, int* SumPtr, int* SubPtr, int* MultipPtr, int* DivPtr);
+
+
+4) Single Line Editor... ( -> , <- , Home , End, Enter , Esc )
+
+

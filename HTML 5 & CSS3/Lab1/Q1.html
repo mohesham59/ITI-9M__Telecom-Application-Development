@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+    <style>
+        input{
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Change Email Address</h1>
+    <form action="" method="get">
+        <!-- Username -->
+        <input id="username" required placeholder="Username" type="text" minlength="5" maxlength="25"> <br>
+        
+        <!-- Email -->
+        <input id="email" required placeholder="Email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" minlength="10" maxlength="60"> <br>
+
+        <!--change-->
+        <input type="submit" value="change">
+    </form>
+
+</body>
+</html>

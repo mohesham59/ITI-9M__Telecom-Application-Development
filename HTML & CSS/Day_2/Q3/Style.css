@@ -1,0 +1,121 @@
+/* 1.a) Make the font type "Lucida Calligraphy" for any p or div or span tag 
+(use one CSS rule).*/
+
+p,div,span {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* 1.b) <h1> tag which is child from div tag to be in the center of the page.*/
+div h1 {
+    text-align: center; 
+}
+
+/* 2. Make inline style for the div with "header" id, that make its width=100%, 
+its height=60px, and its background color red.*/
+div#header {
+    display: inline-block;  /*inline not display;*/
+    width: 100%;
+    height: 60px;
+    background-color: red;
+}
+
+/* 3. Make inline style for the span which its id is "linksbar" , that make its 
+width=25%, its background color gray, and make it starts from the left of 
+the page (float property).*/
+span#linksbar {
+    display: inline;
+    width: 25%;
+    background-color: gray;
+    float: left;
+}
+
+/* 4. Make inline style for the span which its id is "content", that make its 
+width=75%, its height=70%, its back color pink, and make it comes to the 
+left side after the previous span (float property).*/
+span#content {
+    display: inline;
+    width: 75%;
+    height: 70%;
+    background-color: pink;
+    float: left;
+}
+
+/* 5.a) Make a class name "none-bullet-list" that can be applied on <ul> 
+tags, and makes  list style type of the <ul> without bullets (none), 
+and apply this class on the <ul> tag that contains the links (apply it 
+to the <ul> tag in html directly, the selector will be class name only).*/
+.none-bullet-list{
+    list-style-type: none;
+}
+
+/* 5.b) b. Make color red, and background color pink for the links that're direct 
+child for <li> tag, which inside span with id= "linksbar", and make 
+it appear without underline (text-decoration property).*/
+#linksbar ul.none-bullet-list li > a {
+    color: red;
+    background-color: pink;
+}
+
+/* 5.c) Make color pink, and background color red for the links that're direct 
+child for <li> tag, which ( inside span with id= "linksbar", when 
+mouse is over it. */
+#linksbar ul.none-bullet-list li > a:hover {
+    color: pink;
+    background-color: red;
+}
+
+/* 5.d) Make the font weight bold, and font size 12px, for the paragraph that 
+comes directly after (sibling) <h2> tag which is direct child for 
+<span> with id="content".*/
+span#content > h2 + p {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* 5.e)Make a dashed border, with size 2, and color rgb(20,70,60), for the 
+div with id " loginform".*/
+div#loginform {
+    border: 2px dashed black;
+    
+}
+
+/* 5.f) Make style that makes the background color yellow of the any 
+<input> of type "text", and another style that makes its background 
+color white when it's focused. */
+input[type="text"] {
+    background-color: yellow;
+}
+input[type="text"] :focus{
+    background-color: white;
+}
+
+/* 5.g) Make a class named "tabled-bordered" that can be applied on any 
+tag, and make it displayed as table cells (use display property), its 
+padding 5, and make a border for it. Apply the class to the 3 <p> 
+tags that are in the "titles" div (apply them on the p tags that are in 
+"titles" div in html file, the selector will be class name only). */
+.tabled-bordered {
+    display: table-cell;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+/* 5.i) Try to change the <p> tags inside the div with id "titles" to 
+spans, is there any difference?*/
+/*no change because  display: table-cell;*/  
+
+/* 5.h) Use ::after pseudo element, to add this text “Read this” with color 
+yellow” after the paragraph that is nested from span.*/
+/*
+span p::after {
+content: " Read this";
+color: yellow;
+} 
+*/
+
+/*7- Use !important with the first style of the previous 2 styles. What's the 
+change that happened and why? */
+#aboutus { 
+    color: red !important; 
+}
+/* #content > #aboutus { color: yellow !important; } */
